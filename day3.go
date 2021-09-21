@@ -16,7 +16,7 @@ func Day3() {
 	}
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
-	r := regexp.MustCompile("\\#(\\d+) \\@ (\\d+),(\\d+): (\\d+)x(\\d+)")
+	r := regexp.MustCompile(`\#(\d+) \@ (\d+),(\d+): (\d+)x(\d+)`)
 	var m [1002004]int64
 	var clean [4096]bool
 	z := 0
