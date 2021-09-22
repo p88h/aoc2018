@@ -3,18 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"log"
-	"os"
 	"strings"
 )
 
-func Day2() {
-	file, err := os.Open("day2.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-	scanner := bufio.NewScanner(file)
+func Day2(scanner *bufio.Scanner) {
 	var c2, c3 int = 0, 0
 	sl := make([]string, 0, 1024)
 	var sb strings.Builder

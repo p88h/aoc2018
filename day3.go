@@ -3,19 +3,12 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"log"
 	"os"
 	"regexp"
 	"strconv"
 )
 
-func Day3() {
-	file, err := os.Open("day3.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-	scanner := bufio.NewScanner(file)
+func Day3(scanner *bufio.Scanner) {
 	r := regexp.MustCompile(`\#(\d+) \@ (\d+),(\d+): (\d+)x(\d+)`)
 	var m [1002004]int64
 	var clean [4096]bool
