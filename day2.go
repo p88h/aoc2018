@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func Day2(scanner *bufio.Scanner) {
+func (x Aoc) Day2(scanner *bufio.Scanner) {
 	var c2, c3 int = 0, 0
 	sl := make([]string, 0, 1024)
 	var sb strings.Builder

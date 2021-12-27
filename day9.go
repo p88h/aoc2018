@@ -61,7 +61,7 @@ func Game(n int64, l int64) int64 {
 	return max
 }
 
-func Day9(scanner *bufio.Scanner) {
+func (x Aoc) Day9(scanner *bufio.Scanner) {
 	r := regexp.MustCompile(`(\d+) players; last marble is worth (\d+) points`)
 	scanner.Scan()
 	g := r.FindStringSubmatch(scanner.Text())

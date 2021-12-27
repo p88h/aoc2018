@@ -38,7 +38,7 @@ func (p *point) distance(a point) int {
 	return abs(p.x-a.x) + abs(p.y-a.y)
 }
 
-func Day6(scanner *bufio.Scanner) {
+func (x Aoc) Day6(scanner *bufio.Scanner) {
 	// map day -> guard
 	start := make([]point, 0, 1000)
 	points := make(map[point]int)

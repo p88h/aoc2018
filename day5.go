@@ -26,7 +26,7 @@ func react(line string, ignore byte) int {
 	return len(buf)
 }
 
-func Day5(scanner *bufio.Scanner) {
+func (x Aoc) Day5(scanner *bufio.Scanner) {
 	if !scanner.Scan() {
 		return
 	}

@@ -92,7 +92,7 @@ func process(deps map[byte][]byte, workers int) (string, int) {
 	return sb.String(), now
 }
 
-func Day7(scanner *bufio.Scanner) {
+func (x Aoc) Day7(scanner *bufio.Scanner) {
 	r := regexp.MustCompile(`Step ([A-Z]) must be finished before step ([A-Z]) can begin.`)
 	deps := make(map[byte][]byte)
 	for scanner.Scan() {

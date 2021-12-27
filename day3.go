@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-func Day3(scanner *bufio.Scanner) {
+func (x Aoc) Day3(scanner *bufio.Scanner) {
 	r := regexp.MustCompile(`\#(\d+) \@ (\d+),(\d+): (\d+)x(\d+)`)
 	var m [1002004]int64
 	var clean [4096]bool

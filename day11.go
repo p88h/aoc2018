@@ -49,7 +49,7 @@ func find_best(n, b int64) (max, tx, ty int64) {
 	return
 }
 
-func Day11(scanner *bufio.Scanner) {
+func (x Aoc) Day11(scanner *bufio.Scanner) {
 	scanner.Scan()
 	n, _ := strconv.ParseInt(scanner.Text(), 10, 0)
 	fmt.Printf("Day 11 Part 0: %d\n", n)

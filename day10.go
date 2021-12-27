@@ -14,7 +14,7 @@ type lpoint struct {
 	x, y int64
 }
 
-func Day10(scanner *bufio.Scanner) {
+func (x Aoc) Day10(scanner *bufio.Scanner) {
 	r := regexp.MustCompile(`position=<\s*(-?\d+),\s*(-?\d+)> velocity=<\s*(-?\d+),\s*(-?\d+)>`)
 	a := make([]light, 0, 10000)
 	for scanner.Scan() {

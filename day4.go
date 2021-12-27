@@ -40,7 +40,7 @@ func timeparse(s string) (d, i int) {
 	return
 }
 
-func Day4(scanner *bufio.Scanner) {
+func (x Aoc) Day4(scanner *bufio.Scanner) {
 	r1 := regexp.MustCompile(`\[1518-(\d+-\d+ \d+:\d+)\] Guard #(\d+) begins shift`)
 	r2 := regexp.MustCompile(`\[1518-(\d+-\d+ \d+:\d+)\] (wakes up)?(falls asleep)?`)
 	// map day -> guard

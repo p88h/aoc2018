@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func Day1(scanner *bufio.Scanner) {
+func (x Aoc) Day1(scanner *bufio.Scanner) {
 	sl := make([]int64, 0, 1024)
 	for scanner.Scan() {
 		var x, _ = strconv.ParseInt(scanner.Text(), 10, 64)
