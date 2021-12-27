@@ -40,5 +40,5 @@ func Day8(scanner *bufio.Scanner) {
 		sl = append(sl, x)
 	}
 	epos, meta := parse(sl, 0)
-	fmt.Printf("Day 18 Part 1 %d %d\n", meta, epos)
+	fmt.Printf("Day 18 Part 2 %d %d\n", meta, epos)
 }
