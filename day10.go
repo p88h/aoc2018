@@ -27,7 +27,7 @@ func Day10(scanner *bufio.Scanner) {
 	}
 	gmin := int64(1000000)
 	frame := 0
-	for true {
+	for {
 		miny := a[0].y
 		maxy := a[0].y
 		minx := a[0].x

@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-	file, err := os.Open("day10.txt")
+	file, err := os.Open("day11.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
-	Day10(scanner)
+	Day11(scanner)
 }
