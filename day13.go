@@ -14,7 +14,7 @@ type cart struct {
 func (x Aoc) Day13(scanner *bufio.Scanner) {
 	mapp := make([]string, 0, 1000)
 	carts := make([]*cart, 0, 100)
-	chars := map[byte]cart{'<': cart{dx: -1}, '>': cart{dx: 1}, '^': cart{dy: -1}, 'v': cart{dy: 1}}
+	chars := map[byte]cart{'<': {dx: -1}, '>': {dx: 1}, '^': {dy: -1}, 'v': {dy: 1}}
 	y := 0
 	occ := make(map[point]*cart)
 	for scanner.Scan() {
@@ -35,7 +35,7 @@ func (x Aoc) Day13(scanner *bufio.Scanner) {
 	first := point{-1, -1}
 	for riding > 1 {
 		sort.Slice(carts, func(i, j int) bool {
-			return carts[i].y < carts[j].y || carts[i].x < carts[j].x
+			return carts[i].y < carts[j].y || (carts[i].y == carts[j].y && carts[i].x < carts[j].x)
 		})
 		for c := range carts {
 			car := carts[c]
