@@ -56,7 +56,7 @@ func (x Aoc) Day17(scanner *bufio.Scanner) {
 		if flows[deep+1] == nil {
 			flows[deep+1] = make(map[int64]bool, 0)
 		}
-		for p, _ := range flows[deep] {
+		for p := range flows[deep] {
 			if settled(mapp[deep+1][p]) {
 				pl := p - 1
 				pr := p + 1
