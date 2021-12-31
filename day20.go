@@ -14,14 +14,14 @@ func plot(s string, p *int, heads map[point]bool, mapp map[point]byte) (ret map[
 		if ch == '(' {
 			for s[*p] != ')' {
 				*p++
-				for p, _ := range plot(s, p, heads, mapp) {
+				for p := range plot(s, p, heads, mapp) {
 					ret[p] = true
 				}
 			}
 			*p++
 		} else {
 			dir := dirs[ch]
-			for p, _ := range heads {
+			for p := range heads {
 				q := p.add(dir)
 				mapp[q] = doors[ch]
 				q = q.add(dir)
